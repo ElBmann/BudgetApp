@@ -1,2 +1,2 @@
-INSERT INTO USERS (EMAIL,FNAME,LNAME,PASSWORD,NUMBER) 
-VALUES ('john.doe@gmail.com', 'John','Doe','password', '5168193866');
+INSERT INTO USERS (email, firstName, lastName, password, number, createdByUser, createdByDate, updatedByUser, updatedByDate) 
+VALUES ('john.doe@gmail.com', 'John','Doe','password', '5168193866', 'ADMIN', GETDATE(), 'ADMIN', GETDATE());

@@ -17,9 +17,9 @@ public class UserRepository {
 	JdbcTemplate jdbcTemplate;
 	
 	public String getPassword(String email) {
-		String SQL = " SELECT PASSWORD "
+		String SQL = " SELECT password "
 				   + " FROM USERS "
-				   + " WHERE EMAIL = ? ";
+				   + " WHERE email = ? ";
 		
 		return jdbcTemplate.queryForObject(SQL, new Object[] {email},String.class);
 	}
