@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Bromigos.BudgetApp.Service.BudgetService;
+import com.Bromigos.BudgetApp.Service.UserService;
 
 /**
  * 
@@ -17,14 +17,14 @@ import com.Bromigos.BudgetApp.Service.BudgetService;
 
 @RestController
 @RequestMapping(value= "/api")
-public class BudgetController {
+public class UserController {
 
 	@Autowired
-	BudgetService budgetService; 
+	UserService userService; 
 	
 	@GetMapping(value= "/authenticate")
 	public Boolean authenticate(@RequestParam("email") String email,
 								@RequestParam("password") String password) {
-		return budgetService.authenticate(email, password);
+		return userService.authenticate(email, password);
 	}
 }

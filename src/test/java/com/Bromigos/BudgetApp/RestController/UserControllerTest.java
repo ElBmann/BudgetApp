@@ -15,14 +15,14 @@ import org.springframework.test.web.servlet.MockMvc;
 @AutoConfigureMockMvc
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
-public class BudgetControllerTest {
+public class UserControllerTest {
 	@Autowired
-	BudgetController budgetController;
+	UserController userController;
 	
 	@Autowired
 	MockMvc mockMvc;
 	
-	Logger log = Logger.getLogger(BudgetControllerTest.class.toString());
+	Logger log = Logger.getLogger(UserControllerTest.class.toString());
 	
 	@Test
 	public void testAuthenticate() throws Exception {

@@ -3,7 +3,7 @@ package com.Bromigos.BudgetApp.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Bromigos.BudgetApp.Repository.BudgetRepository;
+import com.Bromigos.BudgetApp.Repository.UserRepository;
 /**
  * 
  * @author Brecuero
@@ -11,14 +11,14 @@ import com.Bromigos.BudgetApp.Repository.BudgetRepository;
  * Service Class handles the business logic
  */
 @Service
-public class BudgetService {
+public class UserService {
 	
 	@Autowired
-	BudgetRepository budgetRepository;
+	UserRepository userRepository;
 	
 	public Boolean authenticate(String email, String password) {
 		
-		String datebasePassword = budgetRepository.getPassword(email);
+		String datebasePassword = userRepository.getPassword(email);
 		
 		if(datebasePassword.equals(password)) {
 			return true;
