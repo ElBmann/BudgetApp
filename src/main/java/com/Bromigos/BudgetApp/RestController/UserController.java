@@ -22,9 +22,9 @@ public class UserController {
 	@Autowired
 	UserService userService; 
 	
-	@GetMapping(value= "/authenticate")
-	public Boolean authenticate(@RequestParam("email") String email,
-								@RequestParam("password") String password) {
-		return userService.authenticate(email, password);
+	@GetMapping(value= "/authenticateUser")
+	public Boolean authenticateUser(@RequestParam("email") String email,
+								    @RequestParam("password") String password) {
+		return userService.authenticateUser(email, password);
 	}
 }

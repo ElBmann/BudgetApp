@@ -20,11 +20,11 @@ public class UserServiceTest {
 	Logger log = Logger.getLogger(UserServiceTest.class.toString());
 	
 	@Test
-	public void testAuthenticate() throws Exception{
+	public void testAuthenticateUser() throws Exception{
 		String email = "john.doe@gmail.com";
 		String password = "password";
 		
-		boolean result = userService.authenticate(email, password);
+		boolean result = userService.authenticateUser(email, password);
 		
 		assertThat(result,is(true));
 	}

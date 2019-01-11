@@ -25,12 +25,12 @@ public class UserControllerTest {
 	Logger log = Logger.getLogger(UserControllerTest.class.toString());
 	
 	@Test
-	public void testAuthenticate() throws Exception {
+	public void testAuthenticateUser() throws Exception {
 		String email = "john.doe@gmail.com";
 		String password = "password";
 		
-		this.mockMvc.perform(get("/api/authenticate").param("email", email)
-				                                     .param("password", password))
-		                                             .andExpect(status().isOk());
+		this.mockMvc.perform(get("/api/authenticateUser").param("email", email)
+				                                         .param("password", password))
+		                                                 .andExpect(status().isOk());
 	}
 }

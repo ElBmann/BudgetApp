@@ -16,11 +16,11 @@ public class UserService {
 	@Autowired
 	UserRepository userRepository;
 	
-	public Boolean authenticate(String email, String password) {
+	public Boolean authenticateUser(String email, String password) {
 		
-		String datebasePassword = userRepository.getPassword(email);
+		String correctPassword = userRepository.getPassword(email);
 		
-		if(datebasePassword.equals(password)) {
+		if(correctPassword.equals(password)) {
 			return true;
 		}
 		return false;
