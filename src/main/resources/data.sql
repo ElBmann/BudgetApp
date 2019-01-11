@@ -1,2 +1,2 @@
-INSERT INTO USERS (email, firstName, lastName, password, number, createdByUser, createdByDate, updatedByUser, updatedByDate) 
+INSERT INTO USERS (email, firstName, lastName, password, number, createdBy, createdTimestamp, updatedBy, updatedTimestamp) 
 VALUES ('john.doe@gmail.com', 'John','Doe','password', '5168193866', 'ADMIN', GETDATE(), 'ADMIN', GETDATE());
